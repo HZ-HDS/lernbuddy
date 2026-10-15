@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lernbuddy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Lernen lernen mit dem Lernbuddy – Zukunftswerkstatt der Eingangsklasse Berufliches Gymnasium (SGGG), Hilde-Domin-Schule Herrenberg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#start">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <path d="M18 4 A14 14 0 0 1 30.1 25" fill="none" stroke="var(--plan)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M28 28.3 A14 14 0 0 1 8 28.3" fill="none" stroke="var(--tun)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M5.9 25 A14 14 0 0 1 14.5 4.5" fill="none" stroke="var(--refl)" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Lernbuddy</span>
+        <span class="brand-school" data-schule>Hilde-Domin-Schule Herrenberg</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#start">Start</a>
+      <a href="#buddy">Lernbuddy</a>
+      <a href="#bibliothek">Methoden</a>
+      <a href="#lehrkraefte">Für Lehrkräfte</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ===================== START ===================== -->
+<section class="view" data-view="start">
+
+  <div class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Zukunftswerkstatt · Eingangsklasse Berufliches Gymnasium (SGGG)</span>
+      <h1>Lernen ist kein Talent. Du kannst es <span class="hl-plan">planen</span>, <span class="hl-tun">steuern</span> und <span class="hl-refl">verbessern</span>.</h1>
+      <p class="lead">Der Lernbuddy findet mit dir heraus, woran dein Lernen gerade hakt. Er schlägt passende Methoden vor, und du probierst sie direkt an deinem eigenen Stoff aus.</p>
+      <div class="btn-row">
+        <a class="btn btn-plan" href="#buddy">Lernbuddy starten</a>
+        <a class="btn btn-ghost" href="#was-ist-lernen">Erst verstehen, wie Lernen funktioniert</a>
+      </div>
+    </div>
+    <div class="cycle">
+      <svg id="cycle-svg" viewBox="0 0 300 300" role="group" aria-label="Kreislauf des selbstregulierten Lernens"></svg>
+      <div class="cycle-panel" id="cycle-panel" aria-live="polite"></div>
+      <p class="cycle-hint">Tippe auf eine Phase im Kreis.</p>
+    </div>
+  </div>
+
+  <section class="ws-strip" aria-label="Lernweg der Zukunftswerkstatt">
+    <span class="eyebrow">Passend zur Zukunftswerkstatt</span>
+    <ol class="ws-steps">
+      <li><strong>DS1 · Was hilft wann?</strong><span>Lernstrategien, Methoden und Techniken passend auswählen</span></li>
+      <li><strong>DS2 · Wie steuere ich mein Lernen?</strong><span>Selbstreguliert und selbstorganisiert lernen</span></li>
+      <li><strong>DS3 · Wie plane und überprüfe ich mein Lernen?</strong><span>Klassenarbeit vorbereiten, Generalprobe, weiterlernen</span></li>
+    </ol>
+  </section>
+
+  <section class="sec" aria-labelledby="h-srl">
+    <div class="sec-head">
+      <span class="eyebrow">Worum es geht</span>
+      <h2 id="h-srl">Selbstreguliertes Lernen</h2>
+    </div>
+    <div class="anchor">
+      <div class="anchor-mark" aria-hidden="true">FS</div>
+      <div class="anchor-body">
+        <p class="claim">Selbstreguliertes Lernen lässt sich trainieren. Und wer es beherrscht, lernt erfolgreicher.</p>
+        <p>Das ist eine zentrale Aussage der Forschung von <strong>Prof. Dr. Ferdinand Stebner</strong> (Universität Osnabrück). Selbstreguliert lernen heißt: Du setzt dir eigene Ziele, wählst passende Lernstrategien aus und beobachtest, ob sie funktionieren. Dabei behältst du auch deine Motivation und deine Lernzeit im Blick.</p>
+        <p>Am besten wirkt die Kombination aus zwei Arten von Strategien: <strong>kognitive</strong> Strategien helfen dir, den Stoff zu verarbeiten. <strong>Metakognitive</strong> Strategien helfen dir, dein Lernen zu planen und zu überprüfen. Genau dahin will dich der Lernbuddy bringen.</p>
+        <p class="small muted">Mehr zu Stebners Arbeit: <a href="https://www.ferdinand-stebner.de" target="_blank" rel="noopener">ferdinand-stebner.de</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sieben-fragen" aria-labelledby="h-fragen">
+    <div class="sec-head">
+      <span class="phase-tag tag-plan">Lernberatung</span>
+      <h2 id="h-fragen">Sieben Fragen vor einem Lerntipp</h2>
+      <p class="muted">Nicht jeder Lerntipp hilft bei jedem Problem. Ein <strong>Lernproblem</strong> ist die konkrete Lücke zwischen dem, was du wissen, verstehen oder können sollst, und dem, was du schon sicher kannst. Diese sieben Fragen führen dich vom Auftrag zum passenden Vorgehen.</p>
+    </div>
+    <div class="fragen" id="fragen"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-repertoire">
+    <div class="sec-head">
+      <span class="phase-tag tag-tun">Repertoire</span>
+      <h2 id="h-repertoire">Strategie, Methode, Technik oder Ressource?</h2>
+      <p class="muted">So ordnen wir in der Zukunftswerkstatt unser Repertoire. Die Bereiche ergänzen und überschneiden sich in der Praxis.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><span class="k-label">Lernstrategie</span><h3>Was tue ich grundsätzlich?</h3><p class="small">z. B. abrufen, erklären und verknüpfen, verteilt wiederholen, vergleichen</p></div>
+      <div class="card"><span class="k-label">Lernmethode</span><h3>Wie verbinde ich mehrere Schritte?</h3><p class="small">z. B. Lernkartei, SQ3R, Cornell-Notizen, Lernen mit Lösungsbeispielen</p></div>
+      <div class="card"><span class="k-label">Lerntechnik</span><h3>Welchen Handgriff setze ich ein?</h3><p class="small">z. B. Brain Dump, Concept Map, Vergleichstabelle, Einheitencheck</p></div>
+      <div class="card"><span class="k-label">Ressource</span><h3>Womit oder mit wem?</h3><p class="small">z. B. Schulbuch, Musterlösung, Mitschülerin, Lehrkraft, KI</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="was-ist-lernen" aria-labelledby="h-lernen">
+    <div class="sec-head">
+      <span class="phase-tag tag-tun">Input</span>
+      <h2 id="h-lernen">Was passiert, wenn du lernst?</h2>
+      <p class="muted">Lernen läuft in vier Schritten ab. Tippe auf eine Karte, um zu sehen, was das für dich bedeutet.</p>
+    </div>
+    <div class="grid grid-4" id="flips"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-kurve">
+    <div class="curve">
+      <div class="curve-top">
+        <div>
+          <h3 id="h-kurve">Die Vergessenskurve</h3>
+          <p class="small muted">Schematische Darstellung nach Ebbinghaus</p>
+        </div>
+        <div class="seg" role="group" aria-label="Kurve wählen">
+          <button type="button" id="kurve-ohne" aria-pressed="true">Ohne Wiederholung</button>
+          <button type="button" id="kurve-mit" aria-pressed="false">Mit Wiederholung</button>
+        </div>
+      </div>
+      <svg id="kurve-svg" viewBox="0 0 520 220" role="img" aria-label="Vergessenskurve über sieben Tage"></svg>
+      <p id="kurve-text"></p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-mythos">
+    <div class="sec-head">
+      <span class="phase-tag tag-tun">Check</span>
+      <h2 id="h-mythos">Hilft das beim Lernen?</h2>
+      <p class="muted">Schätze ein, was die Lernforschung zu diesen Strategien sagt. <span class="score" id="myth-score"></span></p>
+    </div>
+    <div class="myth-list" id="myths"></div>
+    <p class="small muted">Grundlage: Dunlosky u. a. (2013), Übersichtsstudie zu zehn Lernstrategien; Pashler u. a. (2008) zu Lerntypen.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="h-motivation">
+    <div class="sec-head">
+      <span class="phase-tag tag-plan">Motivation</span>
+      <h2 id="h-motivation">Woher kommt Motivation?</h2>
+      <p class="muted">Motivation ist kein Zufall. Sie entsteht aus zwei Fragen. Wenn eine Antwort „null“ ist, bleibt auch die Motivation bei null.</p>
+    </div>
+    <div class="formula" aria-label="Motivation gleich Erwartung mal Wert">
+      <span>Motivation</span><span>≈</span>
+      <span class="box">Schaffe ich das?</span><span>×</span>
+      <span class="box b2">Ist es mir wichtig?</span>
+    </div>
+    <div class="grid grid-4">
+      <div class="card tool">
+        <div class="ico ico-plan" data-icon="kompass"></div>
+        <h3>Selbst entscheiden</h3>
+        <p>Wer mitbestimmt, wann, wo und wie gelernt wird, bleibt eher dran.</p>
+        <p class="small muted">Tipp: Wähle deine Lernmethode selbst aus.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-tun" data-icon="haken"></div>
+        <h3>Erfolge sehen</h3>
+        <p>Kleine Ziele, die du sicher erreichst, zeigen dir: Ich kann das.</p>
+        <p class="small muted">Tipp: Hake erledigte Teilziele sichtbar ab.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-refl" data-icon="leute"></div>
+        <h3>Nicht allein lernen</h3>
+        <p>Mit anderen zu lernen motiviert und macht verbindlich.</p>
+        <p class="small muted">Tipp: Verabrede dich zu einem festen Lerntandem.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-plan" data-icon="fahne"></div>
+        <h3>Sinn finden</h3>
+        <p>Frag dich: Wofür brauche ich das, im Abi, im Beruf, im Alltag?</p>
+        <p class="small muted">Tipp: Schreib deinen Grund oben auf deinen Lernplan.</p>
+      </div>
+    </div>
+    <p class="small muted">Grundlage: Erwartung-mal-Wert-Modelle der Motivation; Selbstbestimmungstheorie nach Deci &amp; Ryan.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="h-zeit">
+    <div class="sec-head">
+      <span class="phase-tag tag-plan">Zeitmanagement</span>
+      <h2 id="h-zeit">Vier Werkzeuge für deine Zeit</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card tool">
+        <div class="ico ico-plan" data-icon="kalender"></div>
+        <h3>Rückwärts planen</h3>
+        <p>Starte beim Klausurtermin: Wann muss welches Thema sitzen? Plane einen Tag Puffer ein.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-plan" data-icon="raster"></div>
+        <h3>Eisenhower-Matrix</h3>
+        <p>Sortiere nach wichtig und dringend. Was wichtig, aber nicht dringend ist, kommt fest in den Kalender.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-tun" data-icon="uhr"></div>
+        <h3>Pomodoro</h3>
+        <p>25 Minuten konzentriert lernen, 5 Minuten Pause. Nach vier Runden eine längere Pause.</p>
+      </div>
+      <div class="card tool">
+        <div class="ico ico-tun" data-icon="pfeil"></div>
+        <h3>Wenn-dann-Plan</h3>
+        <p>„Wenn ich nach der Schule gegessen habe, dann lerne ich 30 Minuten Bio.“ Solche Pläne helfen nachweislich gegen Aufschieben.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ki" aria-labelledby="h-ki">
+    <div class="sec-head">
+      <span class="phase-tag tag-refl">KI als Lernressource</span>
+      <h2 id="h-ki">Hilfe ist noch kein Lernen</h2>
+      <p class="muted">Nutze KI so, dass du selbst abrufst, erklärst, strukturierst, rechnest, schreibst oder entscheidest. Prüfe danach möglichst ohne KI, was du selbst kannst.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Plausibel heißt nicht richtig</h3><p>KI ruft kein gesichertes Wissen ab, sondern erzeugt Antworten aus Mustern. Auch falsche Aussagen können überzeugend klingen.</p></div>
+      <div class="card"><h3>Kontext steuert die Antwort</h3><p>Je klarer du sagst, was du lernen sollst und welche Hilfe du willst, desto gezielter wird die Antwort.</p></div>
+      <div class="card"><h3>Kontext ist begrenzt</h3><p>In langen Chats gehen frühere Details verloren. Trenne Themen und wiederhole wichtige Vorgaben.</p></div>
+    </div>
+    <div class="anfrage">
+      <h3>Eine gute Lern-Anfrage nennt …</h3>
+      <ol class="bausteine"><li>was ich können soll</li><li>mein konkretes Lernproblem</li><li>die gewünschte Art der Hilfe</li><li>was die KI nicht übernehmen soll</li></ol>
+      <div class="prompt"><p id="pr-start">Ich kann die Formel einsetzen, verliere aber beim Umstellen und bei den Einheiten den Überblick. Gib mir nicht die Lösung. Frage mich zuerst nach einer sinnvollen Größenordnung, dann nach den Einheiten und anschließend nach meinem Umformungsschritt. Weise mich nur auf den ersten Fehler hin.</p><button type="button" class="btn btn-ghost copy" data-target="pr-start">Kopieren</button></div>
+      <p class="small muted">An unserer Schule nutzt ihr dafür den datenschutzkonformen fobizz-Zugang.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Bereit für deinen eigenen Lernplan?</h2>
+    <p>In sieben Schritten findest du dein Lernproblem, passende Methoden und einen Plan bis zur nächsten Klassenarbeit. Am Ende reflektierst du, was funktioniert hat.</p>
+    <a class="btn btn-plan" href="#buddy">Lernbuddy starten</a>
+  </div>
+</section>
+
+<!-- ===================== LERNBUDDY ===================== -->
+<section class="view" data-view="buddy" hidden>
+  <div class="buddy">
+    <div class="buddy-head">
+      <ol class="stepper" id="stepper" aria-label="Fortschritt"></ol>
+      <p class="small muted" id="step-caption"></p>
+    </div>
+    <div id="step-body"></div>
+    <div class="buddy-nav">
+      <button type="button" class="btn btn-ghost" id="btn-zurueck">Zurück</button>
+      <button type="button" class="btn btn-ghost small" id="btn-reset">Eingaben löschen</button>
+      <button type="button" class="btn btn-plan" id="btn-weiter">Weiter</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BIBLIOTHEK ===================== -->
+<section class="view" data-view="bibliothek" hidden>
+  <section class="sec">
+    <div class="sec-head">
+      <span class="eyebrow">Methodenbibliothek</span>
+      <h2>Alle Lernstrategien und Methoden</h2>
+      <p class="muted">Tippe auf eine Methode, um das Handout zu öffnen: Definition, Einsatz, Vorgehen, Beispiel aus dem Unterricht und KI-Tipps. Jedes Handout gibt es als PDF, für das Kollegium auch alle zusammen.</p>
+    </div>
+    <details class="strat">
+      <summary>Die neun Lernstrategien im Überblick</summary>
+      <dl id="strategien"></dl>
+    </details>
+    <div class="filter" id="filter" role="group" aria-label="Nach Art filtern"></div>
+    <div class="btn-row"><button type="button" class="btn btn-ghost" data-pdf="alle">Alle Handouts als PDF</button><span class="small muted" data-pdf-status></span></div>
+    <div class="lib" id="lib"></div>
+  </section>
+</section>
+
+<!-- ===================== LEHRKRÄFTE ===================== -->
+<section class="view" data-view="lehrkraefte" hidden>
+  <section class="sec">
+    <div class="sec-head">
+      <span class="eyebrow">Für Lehrkräfte</span>
+      <h2>Aufbau und Stand des Projekts</h2>
+      <p class="muted">Der Lernbuddy entsteht in sechs Etappen. Die Methodenhandouts stehen später allen Kolleginnen und Kollegen als einheitliche PDFs zur Verfügung.</p>
+    </div>
+    <ol class="stages">
+      <li class="ok"><span class="st">1</span><div><strong>Konzept</strong><br><span class="small muted">Struktur, Farbsystem, Datenmodell, Empfehlungslogik</span></div></li>
+      <li class="ok"><span class="st">2</span><div><strong>Grundgerüst</strong><br><span class="small muted">Startseite mit Input, Navigation, Auswahl des Lernproblems</span></div></li>
+      <li class="ok"><span class="st">3</span><div><strong>Vorlieben, Methoden, Handouts</strong><br><span class="small muted">Selbsttest, Empfehlungen, Handouts zu allen 43 Methoden, abgestimmt mit den Übungsheften der Zukunftswerkstatt</span></div></li>
+      <li class="ok"><span class="st">4</span><div><strong>Ausprobieren und Planen</strong><br><span class="small muted">Übungen am eigenen Material, SMART-Ziele, Lernzeitplaner</span></div></li>
+      <li class="ok"><span class="st">5</span><div><strong>Feedback, Reflexion, PDF</strong><br><span class="small muted">Reflexion entlang des SRL-Zyklus, Abschluss-PDF, Handout-PDFs</span></div></li>
+      <li class="ok"><span class="st">6</span><div><strong>Veröffentlichen</strong><br><span class="small muted">Anleitung für GitHub Pages</span></div></li>
+    </ol>
+  </section>
+  <section class="sec">
+    <h2>Gut zu wissen</h2>
+    <div class="grid">
+      <div class="card"><h3>Abgleich mit der Zukunftswerkstatt</h3><p>Begriffe und Inhalte sind mit den Übungsheften DS1 und DS2 abgestimmt: Lernproblem als Lücke zwischen Soll und Ist, die sieben Fragen, die Arbeitsordnung Strategie · Methode · Technik · Ressource und KI als Lernressource. Der Lernbuddy ergänzt die Phase „FÜR MICH“ für das eigene Lernen.</p></div>
+      <div class="card"><h3>Datenschutz</h3><p>Kein Server, keine Anmeldung, keine Tracker, keine externen Schriften. Eingaben der Schüler*innen bleiben im Browser des iPads und lassen sich jederzeit löschen.</p></div>
+      <div class="card"><h3>Methoden ergänzen</h3><p>Alle Methodeninhalte stehen in <code>js/methoden.js</code>, Lernprobleme und Fächer in <code>js/zuordnung.js</code>. Beide Dateien lassen sich ohne Programmierkenntnisse bearbeiten.</p></div>
+      <div class="card"><h3>KI im Unterricht</h3><p>Die Seite ruft selbst keine KI auf. Sie zeigt kopierfertige Prompts und Tool-Empfehlungen. Bitte beachtet bei jedem Tool Altersgrenzen und die Datenschutzvorgaben der Schule.</p></div>
+    </div>
+  </section>
+</section>
+
+</main>
+
+<dialog id="handout" class="sheet" aria-labelledby="handout-titel">
+  <div class="sheet-bar"><button type="button" class="btn btn-ghost" id="handout-close">Schließen</button></div>
+  <div class="sheet-body" id="handout-body"></div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <span><span data-schule>Hilde-Domin-Schule Herrenberg</span> · Lernbuddy</span>
+    <span>Deine Eingaben werden nur auf deinem Gerät gespeichert.</span>
+    <span class="rechtliches" id="rechtliches" hidden></span>
+  </div>
+</footer>
+
+<script src="js/zuordnung.js"></script>
+<script src="js/methoden.js"></script>
+<script src="js/handouts.js"></script>
+<script src="js/werkzeuge.js"></script>
+<script src="js/reflexion.js"></script>
+<script src="js/vendor/pdf-lib.min.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
